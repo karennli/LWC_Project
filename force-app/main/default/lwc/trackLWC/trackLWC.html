@@ -1,0 +1,12 @@
+<template>
+  <lightning-card title="Track Decorator">
+    <div class="slds-m-around_medium">
+      {message} my name is {person.name} and my age is {person.age}
+    </div>
+    <lightning-input label="Enter a message" value={message}></lightning-input>
+    <lightning-button
+      label="Change Name"
+      onclick={handleClick}
+    ></lightning-button>
+  </lightning-card>
+</template>

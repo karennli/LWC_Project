@@ -1,0 +1,11 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+  <template lwc:if={incomes.data}>
+    <lightning-datatable
+      key-field="Id"
+      data={incomes.data}
+      columns={columns}
+    ></lightning-datatable>
+  </template>
+</template>

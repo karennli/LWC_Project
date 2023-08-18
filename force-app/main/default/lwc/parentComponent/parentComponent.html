@@ -1,0 +1,30 @@
+<template>
+  <div style="padding: 10px">
+    <lightning-card style="padding: 10px" title="Lightning Card">
+      {selected} {input}
+      <lightning-input label="Enter an Item" value={input}></lightning-input>
+      <lightning-button
+        label="Add Item to List"
+        variant="brand"
+        onclick={addInputToList}
+      ></lightning-button>
+      <template for:each={list} for:item="item">
+        <c-child-component
+          key={item}
+          input-item={item}
+          oninputitemselect={handleSelect}
+        >
+        </c-child-component>
+      </template>
+    </lightning-card>
+  </div>
+  <div style="padding: 5px">
+    <template if:true={selected}>
+      <lightning-card title="Selected Note">
+        <div style="padding: 10px" class="slds-text-heading_large">
+          You Have Selected: {input}
+        </div>
+      </lightning-card>
+    </template>
+  </div>
+</template>

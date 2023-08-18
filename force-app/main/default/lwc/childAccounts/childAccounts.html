@@ -1,0 +1,11 @@
+<!-- sldsValidatorIgnore -->
+<template>
+  <template lwc:if={threeAccounts}>
+    <lightning-datatable
+      key-field="Id"
+      data={threeAccounts}
+      columns={columns}
+      hide-checkbox-column="true"
+    ></lightning-datatable>
+  </template>
+</template>

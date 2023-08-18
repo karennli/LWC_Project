@@ -1,0 +1,14 @@
+<template>
+  <lightning-card>
+    <div class="slds-clearfix">
+      <lightning-button
+        label="Mass Delete"
+        onclick={massDelete}
+        class="slds-float_right"
+      ></lightning-button>
+    </div>
+    <c-child-Accounts></c-child-Accounts>
+  </lightning-card>
+  <lightning-card> <c-child-Bills></c-child-Bills></lightning-card>
+  <lightning-card><c-child-Incomes></c-child-Incomes></lightning-card>
+</template>
